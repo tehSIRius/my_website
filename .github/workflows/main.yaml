@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy to Production
 on:
   push:
     branches: prod
@@ -8,15 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install and Build
-      run: |
-        npm install
-        npm build
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: Install Dependencies and Build 
+    - run: npm install
+    - run: npm build
+    - name: Upload FTP
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "public"
-        remoteDir: "www"
+        local-dir: "public"
