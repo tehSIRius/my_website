@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
-import ScrollTrigger from './ScrollTrigger';
+import ScrollTrigger from '../wrappers/ScrollTrigger';
 
 class Navbar extends React.Component {
     render() {
