@@ -8,8 +8,8 @@ import main from '../../img/main.jpg';
 
 const introStyle = {
     avatar: {
-        width: '35vw',
-        height: '35vw',
+        width: '40vw',
+        height: '40vw',
         borderRadius: '50%',
     },
     avatarWrapper: {
