@@ -18,7 +18,7 @@ jobs:
           npm run build
         
       - name: File Sanity Check
-        run: ls
+        run: ls public
 
       - name: Upload FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
