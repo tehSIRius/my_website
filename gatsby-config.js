@@ -19,6 +19,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/img/favicon.png`
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
   ],
 }
