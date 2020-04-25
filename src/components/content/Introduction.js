@@ -15,7 +15,7 @@ const introStyle = {
     avatarWrapper: {
         display: 'flex',
         justifyContent: 'center',
-    }
+    },
 }
 
 class Introduction extends React.Component {

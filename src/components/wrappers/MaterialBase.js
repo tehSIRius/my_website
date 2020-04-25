@@ -6,6 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 function MaterialBase(props) {
     const colorPreference = useMediaQuery('(prefers-color-scheme: dark)');
+    
     var theme = React.useMemo(
         () => createMuiTheme({
             palette: {
