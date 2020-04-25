@@ -16,7 +16,7 @@ class AboutMe extends React.Component {
         const { classes } = this.props;
 
         return (
-            <ContentWrapper id="about">
+            <ContentWrapper id="about-me">
                 <Paper elevation={1} className={classes.content}>
                     <Grid
                         container
@@ -25,7 +25,7 @@ class AboutMe extends React.Component {
                         alignItems="center"
                     >
 
-                        <Typography variant="h3" component="h2">
+                        <Typography variant="h3" component="h2" id="about-me">
                             Who Am I?
                         </Typography>
                     </Grid>

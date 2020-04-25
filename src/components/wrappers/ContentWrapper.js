@@ -12,12 +12,11 @@ const style = {
 }
 
 class ContentWrapper extends React.Component {
-
     render() {
         const { classes } = this.props;
 
         return (
-            <Parallax id={this.props.id} className={classes.main}>
+            <Parallax className={classes.main}>
                 {this.props.children}
             </Parallax>
         );
