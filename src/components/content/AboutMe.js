@@ -5,6 +5,10 @@ import { withStyles } from '@material-ui/core/styles';
 import ContentWrapper from '../wrappers/ContentWrapper';
 
 const style = {
+    content: {
+        height: '97vh',
+        width: '100vw',
+    }
 }
 
 class AboutMe extends React.Component {
@@ -13,7 +17,7 @@ class AboutMe extends React.Component {
 
         return (
             <ContentWrapper id="about">
-                <Paper elevation={1} className={classes.main}>
+                <Paper elevation={1} className={classes.content}>
                     <Grid
                         container
                         direction="column"
