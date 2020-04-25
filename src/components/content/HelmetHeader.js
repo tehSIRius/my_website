@@ -6,6 +6,7 @@ class HelmetHeader extends React.Component {
         return (
             <Helmet>
                 <title>Patrik Dvořáček</title>
+
                 <meta name="description" content="The personal page of Patrik Dvořáček." />
                 <meta name="theme-color" content="#ff5722" />
                 <meta name="og:title" property="og:title" content="Patrik Dvořáček" />
