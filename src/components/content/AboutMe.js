@@ -1,26 +1,20 @@
 import React from 'react';
-import { Grid, Paper, Typography, Card, CardContent, CardMedia, MobileStepper } from '@material-ui/core';
+import { Grid, Paper, Typography, Card, CardContent, CardMedia } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import InstagramEmbed from 'react-instagram-embed';
 
 import ContentWrapper from '../wrappers/ContentWrapper';
-
-import fallout from '../../img/aboutMe/fallout.jpg';
 
 const style = {
     wrapper: {
         minHeight: '100vh',
         width: '100vw',
-        paddingTop: '15vh',
+        paddingTop: '5vh',
     },
     content: {
-        marginTop: '10vh',
-        minHeight: '50vh',
+        minHeight: '60vh',
     }
 }
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 class AboutMe extends React.Component {
     constructor(props) {
@@ -32,7 +26,7 @@ class AboutMe extends React.Component {
     }
 
     handleStepChange() {
-        
+
     }
 
     render() {
@@ -46,7 +40,7 @@ class AboutMe extends React.Component {
                         direction="row"
                         justify="center"
                         alignItems="center"
-                        spacing={8}
+                        spacing={10}
                     >
                         <Grid item xs={12} md={5}>
                             <Card className={classes.content} elevation={0}>
@@ -64,38 +58,27 @@ class AboutMe extends React.Component {
                                         In fact, I like computers so much that I decided to learn about them at the Faculty of Electrical Engineering at the Czech Technical University in Prague.
                                         So if you want to take away only one word that describes me but really does not encapsulate everything, I would choose <b>geek</b>.
                                     </Typography>
+                                    <Typography>
+                                        Contrary to popular belief about geeks, I do have a social life from time to time. Here is some evidence of that.
+                                        And yes, I am very photogenic and extremely mature. And yes, I look like I am about to sneeze in the picture. That is on purpose. Definitely.
+                                    </Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
-                            <Grid item xs={12} md={5}>
-                                <Card className={classes.content} elevation={0}>
-                                    <CardMedia>
-                                        <AutoPlaySwipeableViews
-                                            axis={'x'}
-                                            index={this.state.activePicture}
-                                            onChangeIndex={this.handleStepChange}
-                                            enableMouseEvents
-                                        >
-                                            <div key={0}>
-                                                <img className={classes.img} src={fallout} alt="Me and my friend at Gamescom." />
-                                            </div>
-                                        </AutoPlaySwipeableViews>
-                                        <MobileStepper
-                                            variant="dots"
-                                            steps={6}
-                                            position="static"
-                                        >
-                                        </MobileStepper>
-                                    </CardMedia>
-                                    <CardContent>
-                                        <Typography>
-                                            Contrary to popular belief about geeks, I do have a social life from time to time. Here is some evidence of that.
-                                            And yes, I am very photogenic and extremely mature.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
+                        <Grid item xs={12} md={5}>
+                            <Card elevation={0}>
+                                <CardContent>
+                                    <InstagramEmbed
+                                        url="https://www.instagram.com/p/B1enEfFIeIH/"
+                                        hideCaption={true}
+                                        containerTagName="div"
+                                        protocol=""
+                                        injectScript
+                                    />
+                                </CardContent>
+                            </Card>
                         </Grid>
+                    </Grid>
                 </Paper>
             </ContentWrapper>
         );
