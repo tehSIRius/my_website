@@ -13,9 +13,6 @@ const style = {
     },
     content: {
         minHeight: '60vh',
-    },
-    img: {
-
     }
 }
 
@@ -77,7 +74,6 @@ class AboutMe extends React.Component {
                                         containerTagName="div"
                                         protocol=""
                                         injectScript
-                                        className={classes.img}
                                     />
                                 </CardContent>
                             </Card>

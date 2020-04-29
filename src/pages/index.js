@@ -7,6 +7,7 @@ import Navbar from '../components/content/Navbar';
 import AboutMe from '../components/content/AboutMe';
 import Introduction from '../components/content/Introduction';
 import FloatingButton from '../components/content/FloatingButton';
+import Education from "../components/content/Education";
 
 class IndexPage extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class IndexPage extends React.Component {
         <Introduction />
         <FloatingButton />
         <AboutMe />
+        <Education />
       </MaterialBase>
     );
   }
