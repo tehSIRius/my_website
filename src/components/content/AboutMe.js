@@ -63,7 +63,7 @@ class AboutMe extends React.Component {
                                     </Typography>
                                     <Typography>
                                         Contrary to popular belief about geeks, I do have a social life from time to time. Here is some evidence of that.
-                                        And yes, I am very photogenic and extremely mature.
+                                        And yes, I am very photogenic and extremely mature. And yes, I look like I am about to sneeze in the picture. That is on purpose. Definitely.
                                     </Typography>
                                 </CardContent>
                             </Card>
