@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const style = {
     main: {
-        height: '95vh',
+        minHeight: '95vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
