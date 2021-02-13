@@ -11,23 +11,47 @@ export class TextBit {
 	 */
 	x: number;
 	/**
-	 * Y position. Changes every tick by speed.
+	 * Y position.
 	 */
 	y: number;
 	/**
-	 * Speed of text fall.
+	 * Font size
+	 */
+	fontSize: number;
+	/**
+	 * Rendered font color
+	 */
+	fontColor: string;
+	/**
+	 * Speed at which the text falls
 	 */
 	speed: number;
+	/**
+	 * Space between text bits
+	 */
+	spacing: number;
 	/**
 	 * Canvas to draw on.
 	 */
 	context: CanvasRenderingContext2D;
 
-	constructor(text: string, x: number, y: number, speed: number, context: CanvasRenderingContext2D) {
+	constructor(
+		text: string,
+		x: number,
+		y: number,
+		fontSize: number,
+		fontColor: string,
+		speed: number,
+		spacing: number,
+		context: CanvasRenderingContext2D
+	) {
 		this.text = text;
 		this.x = x;
 		this.y = y;
+		this.fontSize = fontSize;
+		this.fontColor = fontColor;
 		this.speed = speed;
+		this.spacing = spacing;
 		this.context = context;
 	}
 
@@ -35,23 +59,33 @@ export class TextBit {
 	 * Draws the text on current position
 	 */
 	private draw(): void {
-		this.context.fillStyle = 'darkorange';
-		this.context.font = '14pt Roboto';
+		// Saves previous context state
+		this.context.save();
+		this.context.textBaseline = 'top';
+		// Moves origin to the position of the TextBit
+		this.context.translate(this.x, this.y);
+		// Rotates the rendered text
+		this.context.rotate((-20 * Math.PI) / 180);
 
-		this.context.fillText(this.text, this.x, this.y);
+		this.context.fillStyle = this.fontColor;
+		this.context.font = `${this.fontSize}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
+		this.context.fillText(this.text, 0, 0);
+
+		// Restores to previous context state
+		this.context.restore();
 	}
 
 	/**
 	 * Moves the text and draws it.
 	 *
-	 * @returns {Boolean} Is the text outside visible area?
 	 */
-	tick(): boolean {
-		console.log('here');
-		this.y += this.speed;
-
+	tick(): void {
 		this.draw();
 
-		return this.y > this.context.canvas.height;
+		this.y += this.speed;
+
+		if (this.y > window.innerHeight + this.fontSize) {
+			this.y = -(this.fontSize * this.spacing);
+		}
 	}
 }
