@@ -18,7 +18,7 @@ jobs:
           npm run build
         
       - name: File Sanity Check
-        run: ls public
+        run: ls build
 
       - name: Upload FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
@@ -26,4 +26,4 @@ jobs:
           ftp-server: ${{ secrets.FTP_SERVER }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "public"
+          local-dir: "build/"

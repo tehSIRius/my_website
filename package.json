@@ -1,6 +1,6 @@
 {
 	"name": "dvoracek.dev",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "My own website written in React",
 	"private": false,
 	"author": {
@@ -33,6 +33,7 @@
 		"prettier-eslint": "^12.0.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
+		"react-scripts": "^4.0.1",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
 	},
 	"keywords": [
