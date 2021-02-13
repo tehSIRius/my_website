@@ -22,7 +22,7 @@ jobs:
           git checkout package-lock.json
         
       - name: File Sanity Check
-        run: ls public
+        run: ls build
 
       - name: Upload FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
