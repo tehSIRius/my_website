@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Main } from './Main';
-import { BackgroundAnimation } from '../components/Background';
+import { BackgroundAnimation } from '../Components/Background';
 
 import Profile from '../Assets/Me.jpg';
 
