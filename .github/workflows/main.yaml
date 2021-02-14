@@ -16,7 +16,11 @@ jobs:
         run: |
           npm install
           npm run build
-
+          
+      - name: Reset package-lock.json
+        run: |
+          git checkout package-lock.json
+        
       - name: File Sanity Check
         run: ls build
 
