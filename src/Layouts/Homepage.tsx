@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Main } from './Main';
-import { BackgroundAnimation } from '../Components/Background';
+import { BackgroundAnimation } from '../components/Background';
 
 import Profile from '../Assets/Me.jpg';
 
@@ -50,7 +50,7 @@ export const Homepage: React.FC = () => {
 				/>
 			</div>
 			<div className='flex flex-wrap justify-center content-end w-screen mb-0 sm:mb-10'>
-				<div className='container h-auto sm:h-3/5 sm:w-full relative bg-gray-200 text-gray-800 rounded-xl p-8 mt-32 sm:max-w-three-quarters shadow-xl'>
+				<div className='container h-auto laptop:h-3/5 sm:w-full relative bg-gray-200 text-gray-800 rounded-xl p-8 mt-32 sm:max-w-three-quarters shadow-xl'>
 					<div className='container flex flex-col'>
 						<div className='w-full'>
 							<img
